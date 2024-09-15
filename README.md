@@ -11,31 +11,11 @@ The data was obtained from the Alzheimer's Disease Neuroimaging Initiative (ADNI
 
 - Datasets Used:
 Cognitive Tests, MRI, and PET Data: The primary dataset contained features from cognitive tests, MRI, and PET scans, along with diagnostic information at baseline and at the end of the study. This helped evaluate whether individuals converted from MCI to Alzheimer's Disease (AD). The cognitive test features included:
-Age
-Education
-CDRSB (Clinical Dementia Rating - Sum of Boxes)
-ADAS13 (Alzheimer's Disease Assessment Scale)
-ADAS11
-MMSE (Mini-Mental State Examination)
-RAVLT.immediate (Rey Auditory Verbal Learning Test)
-RAVLT.learning
-RAVLT.forgetting
-RAVLT.perc.forgetting
-FAQ (Functional Activities Questionnaire)
+Age, Education, CDRSB (Clinical Dementia Rating - Sum of Boxes), ADAS13 (Alzheimer's Disease Assessment Scale), ADAS11, MMSE (Mini-Mental State Examination), RAVLT.immediate (Rey Auditory Verbal Learning Test), RAVLT.learning, RAVLT.forgetting, RAVLT.perc.forgetting, FAQ (Functional Activities Questionnaire)
 
 The imaging test features included:
-FDG-PET (Fluorodeoxyglucose-Positron Emission Tomography)
-Ventricles
-Hippocampus
-Whole Brain
-Entorhinal
-Fusiform
-Mid Temporal
-
-CSF Biomarkers: An additional dataset contained cerebrospinal fluid (CSF) biomarker levels for the same patients, including:
-ABETA (Amyloid Beta)
-TAU
-PTAU (Phosphorylated Tau)
+FDG-PET (Fluorodeoxyglucose-Positron Emission Tomography), Ventricles, Hippocampus, Whole Brain, Entorhinal, Fusiform, Mid Temporal
+CSF Biomarkers: An additional dataset contained cerebrospinal fluid (CSF) biomarker levels for the same patients, including: ABETA (Amyloid Beta), TAU, PTAU (Phosphorylated Tau)
 This dataset was merged with the primary dataset to enhance predictive accuracy.
 
 - Data Preprocessing:
