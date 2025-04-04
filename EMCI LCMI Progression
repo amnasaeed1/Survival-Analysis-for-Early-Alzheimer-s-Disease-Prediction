@@ -1,7 +1,8 @@
 from lifelines import KaplanMeierFitter
+from lifelines.statistics import logrank_test
+import matplotlib.pyplot as plt
 
-# Create a KaplanMeierFitter object
-kmf = KaplanMeierFitter()
+# Fit and plot survival curves
 kmf = KaplanMeierFitter()
 
 kmf.fit(group_1, event_observed=event_observed_1, label='Group 1')
@@ -16,3 +17,8 @@ plt.ylabel('Survival Probability')
 plt.title('Survival Curves')
 plt.legend(title='Groups')
 plt.show()
+
+# Perform log-rank test
+results = logrank_test(group_1, group_2, event_observed_A=event_observed_1, event_observed_B=event_observed_2)
+print(f"P-value from log-rank test: {results.p_value:.4f}")
+
