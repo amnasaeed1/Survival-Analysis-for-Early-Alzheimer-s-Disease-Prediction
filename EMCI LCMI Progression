@@ -22,3 +22,42 @@ plt.show()
 results = logrank_test(group_1, group_2, event_observed_A=event_observed_1, event_observed_B=event_observed_2)
 print(f"P-value from log-rank test: {results.p_value:.4f}")
 
+
+
+# Create df1 for rows with 'DX.groups' values 1 or 2
+Df1 = df[df['DX.groups'].isin([1, 2])]
+
+# Create df2 for rows with 'DX.groups' values 3 or 4
+Df2 = df[df['DX.groups'].isin([3, 4])]
+
+# Display the resulting dataframes
+print("Df1:")
+print(Df1)
+
+print("\nDf2:")
+print(Df2)
+
+
+
+# Count the occurrences of each class
+class_counts = Df1['PROGRESSION'].value_counts()
+
+# Create a pie chart
+plt.pie(class_counts.values, labels=class_counts.index, autopct='%1.1f%%')
+plt.axis('equal')
+plt.title('EMCI Target Distribution')
+plt.legend('Stable =0', 'Progressive=1')
+plt.show() 
+
+
+
+
+# Count the occurrences of each class
+class_counts = Df2['PROGRESSION'].value_counts()
+
+# Create a pie chart
+plt.pie(class_counts.values, labels=class_counts.index, autopct='%1.1f%%')
+plt.axis('equal')
+plt.title('LMCI Target Distribution ')
+plt.legend('Stable =0', 'Progressive=1')
+plt.show()
