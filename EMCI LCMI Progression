@@ -1,0 +1,18 @@
+from lifelines import KaplanMeierFitter
+
+# Create a KaplanMeierFitter object
+kmf = KaplanMeierFitter()
+kmf = KaplanMeierFitter()
+
+kmf.fit(group_1, event_observed=event_observed_1, label='Group 1')
+ax = kmf.plot()
+
+kmf.fit(group_2, event_observed=event_observed_2, label='Group 2')
+kmf.plot(ax=ax)
+
+# Add labels and legend
+plt.xlabel('Time (Years)')
+plt.ylabel('Survival Probability')
+plt.title('Survival Curves')
+plt.legend(title='Groups')
+plt.show()
